@@ -1,0 +1,214 @@
+name,class,category,input_shape,output_shape,direct_params,direct_trainable_params,approx_macs,details
+backbone.input_stem.op_list.0.conv,Conv2d,Conv2d,"[[1, 3, 224, 224]]","[1, 16, 112, 112]",432,432,5419008,"in=3, out=16, k=(3, 3), stride=(2, 2), groups=1, bias=False"
+backbone.input_stem.op_list.0.norm,BatchNorm2d,Normalization,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",32,32,,
+backbone.input_stem.op_list.0.act,Hardswish,Activation,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",0,0,,
+backbone.input_stem.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",144,144,1806336,"in=16, out=16, k=(3, 3), stride=(1, 1), groups=16, bias=False"
+backbone.input_stem.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",32,32,,
+backbone.input_stem.op_list.1.main.depth_conv.act,Hardswish,Activation,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",0,0,,
+backbone.input_stem.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",256,256,3211264,"in=16, out=16, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.input_stem.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",32,32,,
+backbone.input_stem.op_list.1.shortcut,IdentityLayer,IdentityLayer,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",0,0,,
+backbone.input_stem.op_list.1,ResidualBlock,Residual block,"[[1, 16, 112, 112]]","[1, 16, 112, 112]",0,0,,
+backbone.stages.0.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 16, 112, 112]]","[1, 64, 112, 112]",1024,1024,12845056,"in=16, out=64, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.0.op_list.0.main.inverted_conv.norm,BatchNorm2d,Normalization,"[[1, 64, 112, 112]]","[1, 64, 112, 112]",128,128,,
+backbone.stages.0.op_list.0.main.inverted_conv.act,Hardswish,Activation,"[[1, 64, 112, 112]]","[1, 64, 112, 112]",0,0,,
+backbone.stages.0.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 64, 112, 112]]","[1, 64, 56, 56]",576,576,1806336,"in=64, out=64, k=(3, 3), stride=(2, 2), groups=64, bias=False"
+backbone.stages.0.op_list.0.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 64, 56, 56]]","[1, 64, 56, 56]",128,128,,
+backbone.stages.0.op_list.0.main.depth_conv.act,Hardswish,Activation,"[[1, 64, 56, 56]]","[1, 64, 56, 56]",0,0,,
+backbone.stages.0.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 64, 56, 56]]","[1, 32, 56, 56]",2048,2048,6422528,"in=64, out=32, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.0.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 32, 56, 56]]","[1, 32, 56, 56]",64,64,,
+backbone.stages.0.op_list.0.main,MBConv,MBConv block,"[[1, 16, 112, 112]]","[1, 32, 56, 56]",0,0,,
+backbone.stages.0.op_list.0,ResidualBlock,Residual block,"[[1, 16, 112, 112]]","[1, 32, 56, 56]",0,0,,
+backbone.stages.0.op_list.1.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 32, 56, 56]]","[1, 128, 56, 56]",4096,4096,12845056,"in=32, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.0.op_list.1.main.inverted_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",256,256,,
+backbone.stages.0.op_list.1.main.inverted_conv.act,Hardswish,Activation,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",0,0,,
+backbone.stages.0.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",1152,1152,3612672,"in=128, out=128, k=(3, 3), stride=(1, 1), groups=128, bias=False"
+backbone.stages.0.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",256,256,,
+backbone.stages.0.op_list.1.main.depth_conv.act,Hardswish,Activation,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",0,0,,
+backbone.stages.0.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 56, 56]]","[1, 32, 56, 56]",4096,4096,12845056,"in=128, out=32, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.0.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 32, 56, 56]]","[1, 32, 56, 56]",64,64,,
+backbone.stages.0.op_list.1.main,MBConv,MBConv block,"[[1, 32, 56, 56]]","[1, 32, 56, 56]",0,0,,
+backbone.stages.0.op_list.1.shortcut,IdentityLayer,IdentityLayer,"[[1, 32, 56, 56]]","[1, 32, 56, 56]",0,0,,
+backbone.stages.0.op_list.1,ResidualBlock,Residual block,"[[1, 32, 56, 56]]","[1, 32, 56, 56]",0,0,,
+backbone.stages.1.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 32, 56, 56]]","[1, 128, 56, 56]",4096,4096,12845056,"in=32, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.0.main.inverted_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",256,256,,
+backbone.stages.1.op_list.0.main.inverted_conv.act,Hardswish,Activation,"[[1, 128, 56, 56]]","[1, 128, 56, 56]",0,0,,
+backbone.stages.1.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 128, 56, 56]]","[1, 128, 28, 28]",1152,1152,903168,"in=128, out=128, k=(3, 3), stride=(2, 2), groups=128, bias=False"
+backbone.stages.1.op_list.0.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 28, 28]]","[1, 128, 28, 28]",256,256,,
+backbone.stages.1.op_list.0.main.depth_conv.act,Hardswish,Activation,"[[1, 128, 28, 28]]","[1, 128, 28, 28]",0,0,,
+backbone.stages.1.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 28, 28]]","[1, 64, 28, 28]",8192,8192,6422528,"in=128, out=64, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",128,128,,
+backbone.stages.1.op_list.0.main,MBConv,MBConv block,"[[1, 32, 56, 56]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.0,ResidualBlock,Residual block,"[[1, 32, 56, 56]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.1.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 64, 28, 28]]","[1, 256, 28, 28]",16384,16384,12845056,"in=64, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.1.main.inverted_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",512,512,,
+backbone.stages.1.op_list.1.main.inverted_conv.act,Hardswish,Activation,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",0,0,,
+backbone.stages.1.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",2304,2304,1806336,"in=256, out=256, k=(3, 3), stride=(1, 1), groups=256, bias=False"
+backbone.stages.1.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",512,512,,
+backbone.stages.1.op_list.1.main.depth_conv.act,Hardswish,Activation,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",0,0,,
+backbone.stages.1.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 28, 28]]","[1, 64, 28, 28]",16384,16384,12845056,"in=256, out=64, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",128,128,,
+backbone.stages.1.op_list.1.main,MBConv,MBConv block,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.1.shortcut,IdentityLayer,IdentityLayer,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.1,ResidualBlock,Residual block,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.2.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 64, 28, 28]]","[1, 256, 28, 28]",16384,16384,12845056,"in=64, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.2.main.inverted_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",512,512,,
+backbone.stages.1.op_list.2.main.inverted_conv.act,Hardswish,Activation,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",0,0,,
+backbone.stages.1.op_list.2.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",2304,2304,1806336,"in=256, out=256, k=(3, 3), stride=(1, 1), groups=256, bias=False"
+backbone.stages.1.op_list.2.main.depth_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",512,512,,
+backbone.stages.1.op_list.2.main.depth_conv.act,Hardswish,Activation,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",0,0,,
+backbone.stages.1.op_list.2.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 28, 28]]","[1, 64, 28, 28]",16384,16384,12845056,"in=256, out=64, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.1.op_list.2.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",128,128,,
+backbone.stages.1.op_list.2.main,MBConv,MBConv block,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.2.shortcut,IdentityLayer,IdentityLayer,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.1.op_list.2,ResidualBlock,Residual block,"[[1, 64, 28, 28]]","[1, 64, 28, 28]",0,0,,
+backbone.stages.2.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 64, 28, 28]]","[1, 256, 28, 28]",16640,16640,12845056,"in=64, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.2.op_list.0.main.inverted_conv.act,Hardswish,Activation,"[[1, 256, 28, 28]]","[1, 256, 28, 28]",0,0,,
+backbone.stages.2.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 256, 28, 28]]","[1, 256, 14, 14]",2560,2560,451584,"in=256, out=256, k=(3, 3), stride=(2, 2), groups=256, bias=True"
+backbone.stages.2.op_list.0.main.depth_conv.act,Hardswish,Activation,"[[1, 256, 14, 14]]","[1, 256, 14, 14]",0,0,,
+backbone.stages.2.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.0.main,MBConv,MBConv block,"[[1, 64, 28, 28]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.0,ResidualBlock,Residual block,"[[1, 64, 28, 28]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 384, 14, 14]",49152,49152,9633792,"in=128, out=384, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.1.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",9600,9600,1881600,"in=384, out=384, k=(5, 5), stride=(1, 1), groups=384, bias=False"
+backbone.stages.2.op_list.1.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",6144,6144,1204224,"in=384, out=384, k=(1, 1), stride=(1, 1), groups=24, bias=False"
+backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.2.op_list.1.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",5120,5120,903168,"in=512, out=512, k=(3, 3), stride=(1, 1), groups=512, bias=True"
+backbone.stages.2.op_list.1.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 14, 14]]","[1, 128, 14, 14]",65536,65536,12845056,"in=512, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.1.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.1.local_module.main,MBConv,MBConv block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.1.local_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 384, 14, 14]",49152,49152,9633792,"in=128, out=384, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.2.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",9600,9600,1881600,"in=384, out=384, k=(5, 5), stride=(1, 1), groups=384, bias=False"
+backbone.stages.2.op_list.2.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",6144,6144,1204224,"in=384, out=384, k=(1, 1), stride=(1, 1), groups=24, bias=False"
+backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.2.op_list.2.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",5120,5120,903168,"in=512, out=512, k=(3, 3), stride=(1, 1), groups=512, bias=True"
+backbone.stages.2.op_list.2.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 14, 14]]","[1, 128, 14, 14]",65536,65536,12845056,"in=512, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.2.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.2.local_module.main,MBConv,MBConv block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.2.local_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 384, 14, 14]",49152,49152,9633792,"in=128, out=384, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.3.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",9600,9600,1881600,"in=384, out=384, k=(5, 5), stride=(1, 1), groups=384, bias=False"
+backbone.stages.2.op_list.3.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 384, 14, 14]]","[1, 384, 14, 14]",6144,6144,1204224,"in=384, out=384, k=(1, 1), stride=(1, 1), groups=24, bias=False"
+backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
+backbone.stages.2.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.2.op_list.3.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",5120,5120,903168,"in=512, out=512, k=(3, 3), stride=(1, 1), groups=512, bias=True"
+backbone.stages.2.op_list.3.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 14, 14]]","[1, 128, 14, 14]",65536,65536,12845056,"in=512, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.2.op_list.3.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.3.local_module.main,MBConv,MBConv block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.2.op_list.3.local_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
+backbone.stages.3.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.3.op_list.0.main.inverted_conv.act,Hardswish,Activation,"[[1, 512, 14, 14]]","[1, 512, 14, 14]",0,0,,
+backbone.stages.3.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 512, 14, 14]]","[1, 512, 7, 7]",5120,5120,225792,"in=512, out=512, k=(3, 3), stride=(2, 2), groups=512, bias=True"
+backbone.stages.3.op_list.0.main.depth_conv.act,Hardswish,Activation,"[[1, 512, 7, 7]]","[1, 512, 7, 7]",0,0,,
+backbone.stages.3.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.0.main,MBConv,MBConv block,"[[1, 128, 14, 14]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.0,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 768, 7, 7]",196608,196608,9633792,"in=256, out=768, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.1.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",19200,19200,940800,"in=768, out=768, k=(5, 5), stride=(1, 1), groups=768, bias=False"
+backbone.stages.3.op_list.1.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",12288,12288,602112,"in=768, out=768, k=(1, 1), stride=(1, 1), groups=48, bias=False"
+backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.3.op_list.1.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",10240,10240,451584,"in=1024, out=1024, k=(3, 3), stride=(1, 1), groups=1024, bias=True"
+backbone.stages.3.op_list.1.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 1024, 7, 7]]","[1, 256, 7, 7]",262144,262144,12845056,"in=1024, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.1.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.1.local_module.main,MBConv,MBConv block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.1.local_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 768, 7, 7]",196608,196608,9633792,"in=256, out=768, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.2.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",19200,19200,940800,"in=768, out=768, k=(5, 5), stride=(1, 1), groups=768, bias=False"
+backbone.stages.3.op_list.2.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",12288,12288,602112,"in=768, out=768, k=(1, 1), stride=(1, 1), groups=48, bias=False"
+backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.3.op_list.2.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",10240,10240,451584,"in=1024, out=1024, k=(3, 3), stride=(1, 1), groups=1024, bias=True"
+backbone.stages.3.op_list.2.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 1024, 7, 7]]","[1, 256, 7, 7]",262144,262144,12845056,"in=1024, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.2.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.2.local_module.main,MBConv,MBConv block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.2.local_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 768, 7, 7]",196608,196608,9633792,"in=256, out=768, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.3.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",19200,19200,940800,"in=768, out=768, k=(5, 5), stride=(1, 1), groups=768, bias=False"
+backbone.stages.3.op_list.3.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",12288,12288,602112,"in=768, out=768, k=(1, 1), stride=(1, 1), groups=48, bias=False"
+backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.3.op_list.3.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",10240,10240,451584,"in=1024, out=1024, k=(3, 3), stride=(1, 1), groups=1024, bias=True"
+backbone.stages.3.op_list.3.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 1024, 7, 7]]","[1, 256, 7, 7]",262144,262144,12845056,"in=1024, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.3.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.3.local_module.main,MBConv,MBConv block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.3.local_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 768, 7, 7]",196608,196608,9633792,"in=256, out=768, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.4.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",19200,19200,940800,"in=768, out=768, k=(5, 5), stride=(1, 1), groups=768, bias=False"
+backbone.stages.3.op_list.4.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,"[[1, 768, 7, 7]]","[1, 768, 7, 7]",12288,12288,602112,"in=768, out=768, k=(1, 1), stride=(1, 1), groups=48, bias=False"
+backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
+backbone.stages.3.op_list.4.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.4.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.4.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
+backbone.stages.3.op_list.4.local_module.main.inverted_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",10240,10240,451584,"in=1024, out=1024, k=(3, 3), stride=(1, 1), groups=1024, bias=True"
+backbone.stages.3.op_list.4.local_module.main.depth_conv.act,Hardswish,Activation,"[[1, 1024, 7, 7]]","[1, 1024, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 1024, 7, 7]]","[1, 256, 7, 7]",262144,262144,12845056,"in=1024, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+backbone.stages.3.op_list.4.local_module.main.point_conv.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.4.local_module.main,MBConv,MBConv block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.local_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+backbone.stages.3.op_list.4.local_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
+head.op_list.0.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1536, 7, 7]",393216,393216,19267584,"in=256, out=1536, k=(1, 1), stride=(1, 1), groups=1, bias=False"
+head.op_list.0.norm,BatchNorm2d,Normalization,"[[1, 1536, 7, 7]]","[1, 1536, 7, 7]",3072,3072,,
+head.op_list.0.act,Hardswish,Activation,"[[1, 1536, 7, 7]]","[1, 1536, 7, 7]",0,0,,
+head.op_list.1,AdaptiveAvgPool2d,Pooling,"[[1, 1536, 7, 7]]","[1, 1536, 1, 1]",0,0,,
+head.op_list.2.linear,Linear,Linear,"[[1, 1536]]","[1, 1600]",2457600,2457600,2457600,"in=1536, out=1600, bias=False"
+head.op_list.2.norm,LayerNorm,Normalization,"[[1, 1600]]","[1, 1600]",3200,3200,,
+head.op_list.2.act,Hardswish,Activation,"[[1, 1600]]","[1, 1600]",0,0,,
+head.op_list.3.linear,Linear,Linear,"[[1, 1600]]","[1, 1000]",1601000,1601000,1600000,"in=1600, out=1000, bias=True"
