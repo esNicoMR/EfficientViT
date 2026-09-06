@@ -77,6 +77,7 @@ backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
 backbone.stages.2.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.2.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.1.context_module.main,LiteMLA,Attention block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,1705984,"linear attention matmuls only; tokens=196, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.2.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.1.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -95,6 +96,7 @@ backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
 backbone.stages.2.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.2.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.2.context_module.main,LiteMLA,Attention block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,1705984,"linear attention matmuls only; tokens=196, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.2.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.2.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -113,6 +115,7 @@ backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 16, 16, 196]]","[1, 16, 16, 196]",0,0,,
 backbone.stages.2.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 14, 14]]","[1, 128, 14, 14]",32768,32768,6422528,"in=256, out=128, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.2.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",256,256,,
+backbone.stages.2.op_list.3.context_module.main,LiteMLA,Attention block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,1705984,"linear attention matmuls only; tokens=196, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.2.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.3.context_module,ResidualBlock,Residual block,"[[1, 128, 14, 14]]","[1, 128, 14, 14]",0,0,,
 backbone.stages.2.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 128, 14, 14]]","[1, 512, 14, 14]",66048,66048,12845056,"in=128, out=512, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -139,6 +142,7 @@ backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
 backbone.stages.3.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.3.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.1.context_module.main,LiteMLA,Attention block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,852992,"linear attention matmuls only; tokens=49, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.3.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.1.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -157,6 +161,7 @@ backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
 backbone.stages.3.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.3.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.2.context_module.main,LiteMLA,Attention block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,852992,"linear attention matmuls only; tokens=49, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.3.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.2.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -175,6 +180,7 @@ backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
 backbone.stages.3.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.3.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.3.context_module.main,LiteMLA,Attention block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,852992,"linear attention matmuls only; tokens=49, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.3.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.3.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"
@@ -193,6 +199,7 @@ backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,"[[1
 backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,"[[1, 32, 16, 49]]","[1, 32, 16, 49]",0,0,,
 backbone.stages.3.op_list.4.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,"[[1, 512, 7, 7]]","[1, 256, 7, 7]",131072,131072,6422528,"in=512, out=256, k=(1, 1), stride=(1, 1), groups=1, bias=False"
 backbone.stages.3.op_list.4.context_module.main.proj.norm,BatchNorm2d,Normalization,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",512,512,,
+backbone.stages.3.op_list.4.context_module.main,LiteMLA,Attention block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,852992,"linear attention matmuls only; tokens=49, dim=16, scales=2; convolution MACs counted in child rows"
 backbone.stages.3.op_list.4.context_module.shortcut,IdentityLayer,IdentityLayer,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.4.context_module,ResidualBlock,Residual block,"[[1, 256, 7, 7]]","[1, 256, 7, 7]",0,0,,
 backbone.stages.3.op_list.4.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,"[[1, 256, 7, 7]]","[1, 1024, 7, 7]",263168,263168,12845056,"in=256, out=1024, k=(1, 1), stride=(1, 1), groups=1, bias=True"

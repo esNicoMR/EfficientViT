@@ -247,4 +247,10 @@ EfficientViTCls(
 Total parameters: 9102024 (9.102M)
 Trainable parameters: 9102024 (9.102M)
 Output shape: [1, 1000]
-Approx. MACs counted from Conv2d/Linear leaves: 510684672 (510.685M)
+Approx. MACs (Conv2d/Linear + LiteMLA matmuls): 519214592 (519.215M)
+
+Non-MAC Operations
+Approx. non-MAC scalar operations: 45,458,570
+Non-MAC breakdown: {"add": 15960727, "compare": 10439808, "div": 9651074, "mul": 9400256, "reduction_add": 76926, "sqrt": 6705}
+Non-MAC counts are logical unfused scalar operations for evaluation, over the entire batch. Subtractions count as additions; comparisons and special functions each count as one operation, not one FLOP or equal hardware cost. Reduction additions are already included in additions. Biases, residual sums, LiteMLA denominator arithmetic, supported activations, eval BatchNorm, LayerNorm and adaptive average pooling are included. BatchNorm uses subtract/divide/affine arithmetic plus per-channel epsilon and square root; LayerNorm uses a two-pass mean/variance estimate. Actual kernels may fuse operations or use reciprocals. BatchNorm may fold into convolutions; these counts do not assert that all operations can be eliminated. Reshapes, concatenation, padding, casts, memory traffic and indexing are excluded. Unsupported leaf modules are listed explicitly; unrecognized functional arithmetic inside composites is not traced. --leaf-only retains LiteMLA and residual rows to preserve totals.
+Unsupported non-MAC leaf types: none

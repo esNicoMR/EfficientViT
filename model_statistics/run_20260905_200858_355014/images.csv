@@ -1,0 +1,3 @@
+path,sha256,instrumented_seconds,predicted_class,macs,skippable_macs,skippable_percent
+D:\Master Thesis\efficientvit\labrador.jpg,a976dbd1974711fdb86c90af2306e53302c6b61879874ecdb13c12bfa2ac604b,0.747053799997957,208,519214592,10967479,2.112321026601656
+D:\Master Thesis\efficientvit\Loki.jpg,1f29dc63f2dab9a98d5dd945fc7b042e3d526f18188091662b217e9db740722d,0.7211852000000363,552,519214592,10275585,1.9790632155422936

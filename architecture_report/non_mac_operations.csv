@@ -1,0 +1,221 @@
+name,class,category,approx_non_mac_ops,non_mac_breakdown
+backbone.input_stem.op_list.0.conv,Conv2d,Conv2d,0,{}
+backbone.input_stem.op_list.0.norm,BatchNorm2d,Normalization,802848,"{""add"": 401424, ""div"": 200704, ""mul"": 200704, ""sqrt"": 16}"
+backbone.input_stem.op_list.0.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.input_stem.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.input_stem.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,802848,"{""add"": 401424, ""div"": 200704, ""mul"": 200704, ""sqrt"": 16}"
+backbone.input_stem.op_list.1.main.depth_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.input_stem.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.input_stem.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,802848,"{""add"": 401424, ""div"": 200704, ""mul"": 200704, ""sqrt"": 16}"
+backbone.input_stem.op_list.1.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.input_stem.op_list.1,ResidualBlock,Residual block,200704,"{""add"": 200704}"
+backbone.stages.0.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.0.op_list.0.main.inverted_conv.norm,BatchNorm2d,Normalization,3211392,"{""add"": 1605696, ""div"": 802816, ""mul"": 802816, ""sqrt"": 64}"
+backbone.stages.0.op_list.0.main.inverted_conv.act,Hardswish,Activation,4014080,"{""add"": 802816, ""compare"": 1605632, ""div"": 802816, ""mul"": 802816}"
+backbone.stages.0.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.0.op_list.0.main.depth_conv.norm,BatchNorm2d,Normalization,802944,"{""add"": 401472, ""div"": 200704, ""mul"": 200704, ""sqrt"": 64}"
+backbone.stages.0.op_list.0.main.depth_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.0.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.0.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,401472,"{""add"": 200736, ""div"": 100352, ""mul"": 100352, ""sqrt"": 32}"
+backbone.stages.0.op_list.0.main,MBConv,MBConv block,0,{}
+backbone.stages.0.op_list.0,ResidualBlock,Residual block,0,{}
+backbone.stages.0.op_list.1.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.0.op_list.1.main.inverted_conv.norm,BatchNorm2d,Normalization,1605888,"{""add"": 802944, ""div"": 401408, ""mul"": 401408, ""sqrt"": 128}"
+backbone.stages.0.op_list.1.main.inverted_conv.act,Hardswish,Activation,2007040,"{""add"": 401408, ""compare"": 802816, ""div"": 401408, ""mul"": 401408}"
+backbone.stages.0.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.0.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,1605888,"{""add"": 802944, ""div"": 401408, ""mul"": 401408, ""sqrt"": 128}"
+backbone.stages.0.op_list.1.main.depth_conv.act,Hardswish,Activation,2007040,"{""add"": 401408, ""compare"": 802816, ""div"": 401408, ""mul"": 401408}"
+backbone.stages.0.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.0.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,401472,"{""add"": 200736, ""div"": 100352, ""mul"": 100352, ""sqrt"": 32}"
+backbone.stages.0.op_list.1.main,MBConv,MBConv block,0,{}
+backbone.stages.0.op_list.1.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.0.op_list.1,ResidualBlock,Residual block,100352,"{""add"": 100352}"
+backbone.stages.1.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.0.main.inverted_conv.norm,BatchNorm2d,Normalization,1605888,"{""add"": 802944, ""div"": 401408, ""mul"": 401408, ""sqrt"": 128}"
+backbone.stages.1.op_list.0.main.inverted_conv.act,Hardswish,Activation,2007040,"{""add"": 401408, ""compare"": 802816, ""div"": 401408, ""mul"": 401408}"
+backbone.stages.1.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.1.op_list.0.main.depth_conv.norm,BatchNorm2d,Normalization,401664,"{""add"": 200832, ""div"": 100352, ""mul"": 100352, ""sqrt"": 128}"
+backbone.stages.1.op_list.0.main.depth_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.1.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,200832,"{""add"": 100416, ""div"": 50176, ""mul"": 50176, ""sqrt"": 64}"
+backbone.stages.1.op_list.0.main,MBConv,MBConv block,0,{}
+backbone.stages.1.op_list.0,ResidualBlock,Residual block,0,{}
+backbone.stages.1.op_list.1.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.1.main.inverted_conv.norm,BatchNorm2d,Normalization,803328,"{""add"": 401664, ""div"": 200704, ""mul"": 200704, ""sqrt"": 256}"
+backbone.stages.1.op_list.1.main.inverted_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.1.op_list.1.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.1.op_list.1.main.depth_conv.norm,BatchNorm2d,Normalization,803328,"{""add"": 401664, ""div"": 200704, ""mul"": 200704, ""sqrt"": 256}"
+backbone.stages.1.op_list.1.main.depth_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.1.op_list.1.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.1.main.point_conv.norm,BatchNorm2d,Normalization,200832,"{""add"": 100416, ""div"": 50176, ""mul"": 50176, ""sqrt"": 64}"
+backbone.stages.1.op_list.1.main,MBConv,MBConv block,0,{}
+backbone.stages.1.op_list.1.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.1.op_list.1,ResidualBlock,Residual block,50176,"{""add"": 50176}"
+backbone.stages.1.op_list.2.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.2.main.inverted_conv.norm,BatchNorm2d,Normalization,803328,"{""add"": 401664, ""div"": 200704, ""mul"": 200704, ""sqrt"": 256}"
+backbone.stages.1.op_list.2.main.inverted_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.1.op_list.2.main.depth_conv.conv,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.1.op_list.2.main.depth_conv.norm,BatchNorm2d,Normalization,803328,"{""add"": 401664, ""div"": 200704, ""mul"": 200704, ""sqrt"": 256}"
+backbone.stages.1.op_list.2.main.depth_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.1.op_list.2.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.1.op_list.2.main.point_conv.norm,BatchNorm2d,Normalization,200832,"{""add"": 100416, ""div"": 50176, ""mul"": 50176, ""sqrt"": 64}"
+backbone.stages.1.op_list.2.main,MBConv,MBConv block,0,{}
+backbone.stages.1.op_list.2.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.1.op_list.2,ResidualBlock,Residual block,50176,"{""add"": 50176}"
+backbone.stages.2.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,200704,"{""add"": 200704}"
+backbone.stages.2.op_list.0.main.inverted_conv.act,Hardswish,Activation,1003520,"{""add"": 200704, ""compare"": 401408, ""div"": 200704, ""mul"": 200704}"
+backbone.stages.2.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.2.op_list.0.main.depth_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.2.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.0.main,MBConv,MBConv block,0,{}
+backbone.stages.2.op_list.0,ResidualBlock,Residual block,0,{}
+backbone.stages.2.op_list.1.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.1.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.2.op_list.1.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.1.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.1.context_module.main,LiteMLA,Attention block,53312,"{""add"": 3136, ""div"": 50176}"
+backbone.stages.2.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.1.context_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.2.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.1.local_module.main.inverted_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.1.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.1.local_module.main.depth_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.1.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.1.local_module.main.point_conv.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.1.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.2.op_list.1.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.1.local_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.2.op_list.2.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.2.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.2.op_list.2.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.2.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.2.context_module.main,LiteMLA,Attention block,53312,"{""add"": 3136, ""div"": 50176}"
+backbone.stages.2.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.2.context_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.2.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.2.local_module.main.inverted_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.2.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.2.local_module.main.depth_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.2.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.2.local_module.main.point_conv.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.2.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.2.op_list.2.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.2.local_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.2.op_list.3.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.3.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.2.op_list.3.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.3.context_module.main.kernel_func,ReLU,Activation,50176,"{""compare"": 50176}"
+backbone.stages.2.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.3.context_module.main,LiteMLA,Attention block,53312,"{""add"": 3136, ""div"": 50176}"
+backbone.stages.2.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.3.context_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.2.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.3.local_module.main.inverted_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.3.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.2.op_list.3.local_module.main.depth_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.2.op_list.3.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.2.op_list.3.local_module.main.point_conv.norm,BatchNorm2d,Normalization,100608,"{""add"": 50304, ""div"": 25088, ""mul"": 25088, ""sqrt"": 128}"
+backbone.stages.2.op_list.3.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.2.op_list.3.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.2.op_list.3.local_module,ResidualBlock,Residual block,25088,"{""add"": 25088}"
+backbone.stages.3.op_list.0.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,100352,"{""add"": 100352}"
+backbone.stages.3.op_list.0.main.inverted_conv.act,Hardswish,Activation,501760,"{""add"": 100352, ""compare"": 200704, ""div"": 100352, ""mul"": 100352}"
+backbone.stages.3.op_list.0.main.depth_conv.conv,Conv2d,Depthwise Conv2d,25088,"{""add"": 25088}"
+backbone.stages.3.op_list.0.main.depth_conv.act,Hardswish,Activation,125440,"{""add"": 25088, ""compare"": 50176, ""div"": 25088, ""mul"": 25088}"
+backbone.stages.3.op_list.0.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.0.main.point_conv.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.0.main,MBConv,MBConv block,0,{}
+backbone.stages.3.op_list.0,ResidualBlock,Residual block,0,{}
+backbone.stages.3.op_list.1.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.1.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.3.op_list.1.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.1.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.1.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.1.context_module.main.proj.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.1.context_module.main,LiteMLA,Attention block,26656,"{""add"": 1568, ""div"": 25088}"
+backbone.stages.3.op_list.1.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.1.context_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.1.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.1.local_module.main.inverted_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.1.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.1.local_module.main.depth_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.1.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.1.local_module.main.point_conv.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.1.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.3.op_list.1.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.1.local_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.2.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.2.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.3.op_list.2.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.2.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.2.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.2.context_module.main.proj.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.2.context_module.main,LiteMLA,Attention block,26656,"{""add"": 1568, ""div"": 25088}"
+backbone.stages.3.op_list.2.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.2.context_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.2.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.2.local_module.main.inverted_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.2.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.2.local_module.main.depth_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.2.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.2.local_module.main.point_conv.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.2.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.3.op_list.2.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.2.local_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.3.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.3.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.3.op_list.3.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.3.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.3.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.3.context_module.main.proj.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.3.context_module.main,LiteMLA,Attention block,26656,"{""add"": 1568, ""div"": 25088}"
+backbone.stages.3.op_list.3.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.3.context_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.3.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.3.local_module.main.inverted_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.3.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.3.local_module.main.depth_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.3.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.3.local_module.main.point_conv.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.3.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.3.op_list.3.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.3.local_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.4.context_module.main.qkv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.4.context_module.main.aggreg.0.0,Conv2d,Depthwise Conv2d,0,{}
+backbone.stages.3.op_list.4.context_module.main.aggreg.0.1,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.4.context_module.main.kernel_func,ReLU,Activation,25088,"{""compare"": 25088}"
+backbone.stages.3.op_list.4.context_module.main.proj.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.4.context_module.main.proj.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.4.context_module.main,LiteMLA,Attention block,26656,"{""add"": 1568, ""div"": 25088}"
+backbone.stages.3.op_list.4.context_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.4.context_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+backbone.stages.3.op_list.4.local_module.main.inverted_conv.conv,Conv2d,Pointwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.4.local_module.main.inverted_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.4.local_module.main.depth_conv.conv,Conv2d,Depthwise Conv2d,50176,"{""add"": 50176}"
+backbone.stages.3.op_list.4.local_module.main.depth_conv.act,Hardswish,Activation,250880,"{""add"": 50176, ""compare"": 100352, ""div"": 50176, ""mul"": 50176}"
+backbone.stages.3.op_list.4.local_module.main.point_conv.conv,Conv2d,Pointwise Conv2d,0,{}
+backbone.stages.3.op_list.4.local_module.main.point_conv.norm,BatchNorm2d,Normalization,50688,"{""add"": 25344, ""div"": 12544, ""mul"": 12544, ""sqrt"": 256}"
+backbone.stages.3.op_list.4.local_module.main,MBConv,MBConv block,0,{}
+backbone.stages.3.op_list.4.local_module.shortcut,IdentityLayer,IdentityLayer,0,{}
+backbone.stages.3.op_list.4.local_module,ResidualBlock,Residual block,12544,"{""add"": 12544}"
+head.op_list.0.conv,Conv2d,Pointwise Conv2d,0,{}
+head.op_list.0.norm,BatchNorm2d,Normalization,304128,"{""add"": 152064, ""div"": 75264, ""mul"": 75264, ""sqrt"": 1536}"
+head.op_list.0.act,Hardswish,Activation,376320,"{""add"": 75264, ""compare"": 150528, ""div"": 75264, ""mul"": 75264}"
+head.op_list.1,AdaptiveAvgPool2d,Pooling,75264,"{""add"": 73728, ""div"": 1536, ""reduction_add"": 73728}"
+head.op_list.2.linear,Linear,Linear,0,{}
+head.op_list.2.norm,LayerNorm,Normalization,11202,"{""add"": 6399, ""div"": 1602, ""mul"": 3200, ""reduction_add"": 3198, ""sqrt"": 1}"
+head.op_list.2.act,Hardswish,Activation,8000,"{""add"": 1600, ""compare"": 3200, ""div"": 1600, ""mul"": 1600}"
+head.op_list.3.linear,Linear,Linear,1000,"{""add"": 1000}"

@@ -1,0 +1,30 @@
+{
+  "model": "efficientvit-b1-r224",
+  "requested_images": 25,
+  "available_images": 3925,
+  "seed": 0,
+  "threads": 2,
+  "dtype": "float32",
+  "device": "cpu",
+  "torch_version": "2.14.0+cpu",
+  "weights": "D:\\Master Thesis\\efficientvit\\assets\\checkpoints\\efficientvit_cls\\efficientvit_b1_r224.pt",
+  "weights_sha256": "bf8798aa03ed2bba21fc8d58f43ca9a92096f3f03bd700e1df1dcde11559f499",
+  "script_sha256": "72f00688299e7eda6cdc51622db0a51b8a71385f9f53075469277655f6c04984",
+  "preprocessing": "EXIF transpose, RGB, resize shortest side 256 bilinear, center crop 224, ImageNet mean/std",
+  "block_size": 16,
+  "tile_rows": 4,
+  "notes": "Counts use exact zeros, FP32 CPU, batch size 1, eval and inference mode.\nMACs cover Conv2d, Linear and both LiteMLA matrix products, including its padded\ndenominator channel. Biases and non-MAC arithmetic are NOT counted as MAC savings.\nEither-zero products are counted once; both-zero is the overlap. Padding MACs are\na subset of skippable MACs; skippable minus padding excludes zero-padding opportunities.\nConv left operand is weight; linear left operand is activation; attention operand\nnames give their order. Zero tensor entries alone do not imply skippable work.\nStructured channels/positions refer to NCHW tensors. Blocks are contiguous flattened\ngroups, not a particular hardware layout; incomplete tails are excluded from blocks.\nActivation rows overlap across boundaries and must not be summed as unique model data.\nThe instrumentation recomputes attention intermediates for observation and uses\ntiled convolution masks. Timings include this overhead and are NOT inference benchmarks.\nPotential savings are upper bounds on zero-product arithmetic, not latency/energy savings.\nDense kernels may already avoid padding; zero skipping needs implementation support.\nReordering sparse reductions may affect floating-point rounding. No accuracy is measured.\nImage labels are unnecessary. A few personal images are a smoke test, not representative evidence.\n",
+  "status": "completed",
+  "processed_images": 25,
+  "failures": [],
+  "totals": {
+    "macs": 12980364800,
+    "skippable_macs": 274525955,
+    "padding_macs": 76990800,
+    "left_zero_macs": 12199728,
+    "right_zero_macs": 263905918,
+    "both_zero_macs": 1579691,
+    "nonzero_product_macs": 12705838845
+  },
+  "skippable_percent": 2.114932509446884
+}
